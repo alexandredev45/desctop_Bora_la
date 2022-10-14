@@ -27,7 +27,15 @@ namespace borala
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           
+
+            DialogResult result = MessageBox.Show("Deseja realmente atualizar esse produto?", "Aviso", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+
+                Application.Exit();
+            }
         }
     }
 }

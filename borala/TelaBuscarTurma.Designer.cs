@@ -31,29 +31,63 @@ namespace borala
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_cadastrar_evento = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.boraLati44DataSet4 = new borala.BoraLati44DataSet4();
-            this.turmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.turmaTableAdapter = new borala.BoraLati44DataSet4TableAdapters.TurmaTableAdapter();
             this.idTurmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.periodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horarioInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horarioFimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.turmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boraLati44DataSet4 = new borala.BoraLati44DataSet4();
+            this.turmaTableAdapter = new borala.BoraLati44DataSet4TableAdapters.TurmaTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turmaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel1.Controls.Add(this.btn_cadastrar);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btn_cadastrar_evento);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(39, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(847, 379);
             this.panel1.TabIndex = 2;
+            // 
+            // btn_cadastrar
+            // 
+            this.btn_cadastrar.Location = new System.Drawing.Point(364, 282);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(98, 39);
+            this.btn_cadastrar.TabIndex = 3;
+            this.btn_cadastrar.Text = "Excluir";
+            this.btn_cadastrar.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(249, 282);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 39);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Atualizar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btn_cadastrar_evento
+            // 
+            this.btn_cadastrar_evento.Location = new System.Drawing.Point(133, 282);
+            this.btn_cadastrar_evento.Name = "btn_cadastrar_evento";
+            this.btn_cadastrar_evento.Size = new System.Drawing.Size(98, 39);
+            this.btn_cadastrar_evento.TabIndex = 1;
+            this.btn_cadastrar_evento.Text = "Cadastrar";
+            this.btn_cadastrar_evento.UseVisualStyleBackColor = true;
+            this.btn_cadastrar_evento.Click += new System.EventHandler(this.btn_cadastrar_evento_Click);
             // 
             // dataGridView1
             // 
@@ -70,20 +104,6 @@ namespace borala
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(581, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // boraLati44DataSet4
-            // 
-            this.boraLati44DataSet4.DataSetName = "BoraLati44DataSet4";
-            this.boraLati44DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // turmaBindingSource
-            // 
-            this.turmaBindingSource.DataMember = "Turma";
-            this.turmaBindingSource.DataSource = this.boraLati44DataSet4;
-            // 
-            // turmaTableAdapter
-            // 
-            this.turmaTableAdapter.ClearBeforeFill = true;
             // 
             // idTurmaDataGridViewTextBoxColumn
             // 
@@ -116,6 +136,20 @@ namespace borala
             this.horarioFimDataGridViewTextBoxColumn.HeaderText = "HorarioFim";
             this.horarioFimDataGridViewTextBoxColumn.Name = "horarioFimDataGridViewTextBoxColumn";
             // 
+            // turmaBindingSource
+            // 
+            this.turmaBindingSource.DataMember = "Turma";
+            this.turmaBindingSource.DataSource = this.boraLati44DataSet4;
+            // 
+            // boraLati44DataSet4
+            // 
+            this.boraLati44DataSet4.DataSetName = "BoraLati44DataSet4";
+            this.boraLati44DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // turmaTableAdapter
+            // 
+            this.turmaTableAdapter.ClearBeforeFill = true;
+            // 
             // TelaBuscarTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,8 +161,8 @@ namespace borala
             this.Load += new System.EventHandler(this.TelaBuscarTurma_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.turmaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,5 +179,8 @@ namespace borala
         private System.Windows.Forms.DataGridViewTextBoxColumn periodoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horarioInicioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horarioFimDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_cadastrar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_cadastrar_evento;
     }
 }

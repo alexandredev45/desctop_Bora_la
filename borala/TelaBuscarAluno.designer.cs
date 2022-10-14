@@ -32,11 +32,6 @@ namespace borala
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.boraLati44DataSet1 = new borala.BoraLati44DataSet1();
-            this.boraLati44DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.boraLati44DataSet2 = new borala.BoraLati44DataSet2();
-            this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.alunoTableAdapter = new borala.BoraLati44DataSet2TableAdapters.AlunoTableAdapter();
             this.idAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +52,20 @@ namespace borala
             this.complementoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acessointernetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boraLati44DataSet2 = new borala.BoraLati44DataSet2();
+            this.boraLati44DataSet1 = new borala.BoraLati44DataSet1();
+            this.boraLati44DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alunoTableAdapter = new borala.BoraLati44DataSet2TableAdapters.AlunoTableAdapter();
+            this.btn_excluir = new System.Windows.Forms.Button();
+            this.btn_atualizar = new System.Windows.Forms.Button();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,7 +74,7 @@ namespace borala
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(42, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1166, 571);
+            this.panel1.Size = new System.Drawing.Size(1166, 484);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -102,32 +105,8 @@ namespace borala
             this.dataGridView1.DataSource = this.alunoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(37, 39);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1100, 499);
+            this.dataGridView1.Size = new System.Drawing.Size(1100, 398);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // boraLati44DataSet1
-            // 
-            this.boraLati44DataSet1.DataSetName = "BoraLati44DataSet1";
-            this.boraLati44DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // boraLati44DataSet1BindingSource
-            // 
-            this.boraLati44DataSet1BindingSource.DataSource = this.boraLati44DataSet1;
-            this.boraLati44DataSet1BindingSource.Position = 0;
-            // 
-            // boraLati44DataSet2
-            // 
-            this.boraLati44DataSet2.DataSetName = "BoraLati44DataSet2";
-            this.boraLati44DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // alunoBindingSource
-            // 
-            this.alunoBindingSource.DataMember = "Aluno";
-            this.alunoBindingSource.DataSource = this.boraLati44DataSet2;
-            // 
-            // alunoTableAdapter
-            // 
-            this.alunoTableAdapter.ClearBeforeFill = true;
             // 
             // idAlunoDataGridViewTextBoxColumn
             // 
@@ -250,21 +229,76 @@ namespace borala
             this.cADDataGridViewTextBoxColumn.HeaderText = "CAD";
             this.cADDataGridViewTextBoxColumn.Name = "cADDataGridViewTextBoxColumn";
             // 
+            // alunoBindingSource
+            // 
+            this.alunoBindingSource.DataMember = "Aluno";
+            this.alunoBindingSource.DataSource = this.boraLati44DataSet2;
+            // 
+            // boraLati44DataSet2
+            // 
+            this.boraLati44DataSet2.DataSetName = "BoraLati44DataSet2";
+            this.boraLati44DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // boraLati44DataSet1
+            // 
+            this.boraLati44DataSet1.DataSetName = "BoraLati44DataSet1";
+            this.boraLati44DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // boraLati44DataSet1BindingSource
+            // 
+            this.boraLati44DataSet1BindingSource.DataSource = this.boraLati44DataSet1;
+            this.boraLati44DataSet1BindingSource.Position = 0;
+            // 
+            // alunoTableAdapter
+            // 
+            this.alunoTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_excluir
+            // 
+            this.btn_excluir.Location = new System.Drawing.Point(697, 547);
+            this.btn_excluir.Name = "btn_excluir";
+            this.btn_excluir.Size = new System.Drawing.Size(98, 39);
+            this.btn_excluir.TabIndex = 6;
+            this.btn_excluir.Text = "Excluir";
+            this.btn_excluir.UseVisualStyleBackColor = true;
+            // 
+            // btn_atualizar
+            // 
+            this.btn_atualizar.Location = new System.Drawing.Point(582, 547);
+            this.btn_atualizar.Name = "btn_atualizar";
+            this.btn_atualizar.Size = new System.Drawing.Size(98, 39);
+            this.btn_atualizar.TabIndex = 5;
+            this.btn_atualizar.Text = "Atualizar";
+            this.btn_atualizar.UseVisualStyleBackColor = true;
+            // 
+            // btn_cadastrar
+            // 
+            this.btn_cadastrar.Location = new System.Drawing.Point(466, 547);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(98, 39);
+            this.btn_cadastrar.TabIndex = 4;
+            this.btn_cadastrar.Text = "Cadastrar";
+            this.btn_cadastrar.UseVisualStyleBackColor = true;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
+            // 
             // TelaBuscarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 637);
+            this.Controls.Add(this.btn_excluir);
+            this.Controls.Add(this.btn_atualizar);
+            this.Controls.Add(this.btn_cadastrar);
             this.Controls.Add(this.panel1);
             this.Name = "TelaBuscarAluno";
             this.Text = "TelaBuscarAluno";
             this.Load += new System.EventHandler(this.TelaBuscarAluno_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,5 +332,8 @@ namespace borala
         private System.Windows.Forms.DataGridViewTextBoxColumn complementoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn acessointernetDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cADDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_excluir;
+        private System.Windows.Forms.Button btn_atualizar;
+        private System.Windows.Forms.Button btn_cadastrar;
     }
 }

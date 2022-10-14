@@ -35,5 +35,11 @@ namespace borala
             this.turmaTableAdapter.Fill(this.boraLati44DataSet4.Turma);
 
         }
+
+        private void btn_cadastrar_evento_Click(object sender, EventArgs e)
+        {
+            AtualizarTurma tela = new AtualizarTurma();
+            tela.Show();
+        }
     }
 }

@@ -35,5 +35,11 @@ namespace borala
             this.profTableAdapter.Fill(this.boraLati44DataSet5.Prof);
 
         }
+
+        private void bnt_cadastrar_prof_Click(object sender, EventArgs e)
+        {
+            AtualizarProfessor tela = new AtualizarProfessor();
+            tela.Show();
+        }
     }
 }

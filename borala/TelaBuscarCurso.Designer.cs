@@ -31,6 +31,8 @@ namespace borala
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,11 +42,10 @@ namespace borala
             this.idTurmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boraLati44DataSet = new borala.BoraLati44DataSet();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.btn_cadastrar_curso = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cursoTableAdapter = new borala.BoraLati44DataSetTableAdapters.CursoTableAdapter();
-            this.btnNovo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
@@ -54,15 +55,34 @@ namespace borala
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel1.Controls.Add(this.btnNovo);
+            this.panel1.Controls.Add(this.btn_cadastrar);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.btnEditar);
+            this.panel1.Controls.Add(this.btn_cadastrar_curso);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(43, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 545);
             this.panel1.TabIndex = 1;
+            // 
+            // btn_cadastrar
+            // 
+            this.btn_cadastrar.Location = new System.Drawing.Point(549, 497);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(98, 39);
+            this.btn_cadastrar.TabIndex = 6;
+            this.btn_cadastrar.Text = "Excluir";
+            this.btn_cadastrar.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(434, 497);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 39);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Atualizar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -128,15 +148,15 @@ namespace borala
             this.boraLati44DataSet.DataSetName = "BoraLati44DataSet";
             this.boraLati44DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnEditar
+            // btn_cadastrar_curso
             // 
-            this.btnEditar.Location = new System.Drawing.Point(811, 491);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(109, 45);
-            this.btnEditar.TabIndex = 2;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btn_cadastrar_curso.Location = new System.Drawing.Point(318, 497);
+            this.btn_cadastrar_curso.Name = "btn_cadastrar_curso";
+            this.btn_cadastrar_curso.Size = new System.Drawing.Size(98, 39);
+            this.btn_cadastrar_curso.TabIndex = 4;
+            this.btn_cadastrar_curso.Text = "Cadastrar";
+            this.btn_cadastrar_curso.UseVisualStyleBackColor = true;
+            this.btn_cadastrar_curso.Click += new System.EventHandler(this.btn_cadastrar_curso_Click);
             // 
             // button1
             // 
@@ -159,16 +179,6 @@ namespace borala
             // 
             this.cursoTableAdapter.ClearBeforeFill = true;
             // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(618, 491);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(105, 45);
-            this.btnNovo.TabIndex = 6;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
             // TelaBuscarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,7 +199,6 @@ namespace borala
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -202,6 +211,8 @@ namespace borala
         private System.Windows.Forms.DataGridViewTextBoxColumn dataInicoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataFimDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idTurmaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btn_cadastrar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_cadastrar_curso;
     }
 }

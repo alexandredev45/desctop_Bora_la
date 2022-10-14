@@ -35,5 +35,11 @@ namespace borala
             this.eventoTableAdapter.Fill(this.boraLati44DataSet3.Evento);
 
         }
+
+        private void btn_cadastrar_evento_Click(object sender, EventArgs e)
+        {
+            CadastrarEventos tela = new CadastrarEventos();
+            tela.Show();
+        }
     }
 }

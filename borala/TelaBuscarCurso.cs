@@ -27,5 +27,16 @@ namespace borala
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cadastrar_curso_Click(object sender, EventArgs e)
+        {
+            CadastrarCurso tela = new CadastrarCurso();
+            tela.Show();
+        }
     }
 }

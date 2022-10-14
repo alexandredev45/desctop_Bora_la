@@ -35,5 +35,11 @@ namespace borala
             this.alunoTableAdapter.Fill(this.boraLati44DataSet2.Aluno);
 
         }
+
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
+            AtualizarAluno tela = new AtualizarAluno();
+            tela.Show();
+        }
     }
 }

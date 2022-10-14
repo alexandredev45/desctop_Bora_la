@@ -35,7 +35,7 @@ namespace borala
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bnt_sair = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +90,7 @@ namespace borala
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.bnt_sair);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
@@ -101,17 +101,17 @@ namespace borala
             this.panel1.Size = new System.Drawing.Size(248, 213);
             this.panel1.TabIndex = 5;
             // 
-            // button2
+            // bnt_sair
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(143, 156);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 38);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Sair";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bnt_sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bnt_sair.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_sair.Location = new System.Drawing.Point(143, 156);
+            this.bnt_sair.Name = "bnt_sair";
+            this.bnt_sair.Size = new System.Drawing.Size(86, 38);
+            this.bnt_sair.TabIndex = 5;
+            this.bnt_sair.Text = "Sair";
+            this.bnt_sair.UseVisualStyleBackColor = false;
+            this.bnt_sair.Click += new System.EventHandler(this.button2_Click);
             // 
             // Login
             // 
@@ -123,7 +123,6 @@ namespace borala
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
-            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -138,6 +137,6 @@ namespace borala
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bnt_sair;
     }
 }

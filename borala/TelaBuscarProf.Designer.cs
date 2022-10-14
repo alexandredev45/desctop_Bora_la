@@ -32,9 +32,6 @@ namespace borala
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.boraLati44DataSet5 = new borala.BoraLati44DataSet5();
-            this.profBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.profTableAdapter = new borala.BoraLati44DataSet5TableAdapters.ProfTableAdapter();
             this.idProfessorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +46,16 @@ namespace borala
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTurmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDisciplinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boraLati44DataSet5 = new borala.BoraLati44DataSet5();
+            this.profTableAdapter = new borala.BoraLati44DataSet5TableAdapters.ProfTableAdapter();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.bnt_cadastrar_prof = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,20 +91,6 @@ namespace borala
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1401, 312);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // boraLati44DataSet5
-            // 
-            this.boraLati44DataSet5.DataSetName = "BoraLati44DataSet5";
-            this.boraLati44DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // profBindingSource
-            // 
-            this.profBindingSource.DataMember = "Prof";
-            this.profBindingSource.DataSource = this.boraLati44DataSet5;
-            // 
-            // profTableAdapter
-            // 
-            this.profTableAdapter.ClearBeforeFill = true;
             // 
             // idProfessorDataGridViewTextBoxColumn
             // 
@@ -188,19 +177,64 @@ namespace borala
             this.idDisciplinaDataGridViewTextBoxColumn.HeaderText = "IdDisciplina";
             this.idDisciplinaDataGridViewTextBoxColumn.Name = "idDisciplinaDataGridViewTextBoxColumn";
             // 
+            // profBindingSource
+            // 
+            this.profBindingSource.DataMember = "Prof";
+            this.profBindingSource.DataSource = this.boraLati44DataSet5;
+            // 
+            // boraLati44DataSet5
+            // 
+            this.boraLati44DataSet5.DataSetName = "BoraLati44DataSet5";
+            this.boraLati44DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // profTableAdapter
+            // 
+            this.profTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_cadastrar
+            // 
+            this.btn_cadastrar.Location = new System.Drawing.Point(746, 446);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(98, 39);
+            this.btn_cadastrar.TabIndex = 6;
+            this.btn_cadastrar.Text = "Excluir";
+            this.btn_cadastrar.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(631, 446);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 39);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Atualizar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // bnt_cadastrar_prof
+            // 
+            this.bnt_cadastrar_prof.Location = new System.Drawing.Point(515, 446);
+            this.bnt_cadastrar_prof.Name = "bnt_cadastrar_prof";
+            this.bnt_cadastrar_prof.Size = new System.Drawing.Size(98, 39);
+            this.bnt_cadastrar_prof.TabIndex = 4;
+            this.bnt_cadastrar_prof.Text = "Cadastrar";
+            this.bnt_cadastrar_prof.UseVisualStyleBackColor = true;
+            this.bnt_cadastrar_prof.Click += new System.EventHandler(this.bnt_cadastrar_prof_Click);
+            // 
             // TelaBuscarProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 431);
+            this.ClientSize = new System.Drawing.Size(1484, 497);
+            this.Controls.Add(this.btn_cadastrar);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bnt_cadastrar_prof);
             this.Controls.Add(this.panel1);
             this.Name = "TelaBuscarProf";
             this.Text = "TelaBuscarProf";
             this.Load += new System.EventHandler(this.TelaBuscarProf_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boraLati44DataSet5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,5 +260,8 @@ namespace borala
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idTurmaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDisciplinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_cadastrar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bnt_cadastrar_prof;
     }
 }
